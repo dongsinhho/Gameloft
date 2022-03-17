@@ -29,7 +29,7 @@ const SignUp = () => {
     }   
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form id='create' onSubmit={handleSubmit}>
                 <h5><strong>*Note:</strong> This form has not been validated in react </h5>
                 <h1>Create User</h1>
                 <input onChange={e => setUsername(e.target.value)} type="text" name="Username" placeholder='Username'/>

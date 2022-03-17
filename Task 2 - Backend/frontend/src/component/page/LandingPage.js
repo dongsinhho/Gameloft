@@ -23,6 +23,7 @@ const LandingPage = () => {
             .then(data => {
                 if (data.token) {
                     //document.cookie = "accessToken=" + data.token + ";expires=Thu, 18 Dec 2023 12:00:00 UTC"
+                    
                     window.location.href = '/home'
                 } else {
                     alert(data.message)

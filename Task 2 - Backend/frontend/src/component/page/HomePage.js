@@ -53,11 +53,8 @@ const HomePage = () => {
           />
           <button type='Submit'>Search</button>
         </form>
-
       </div>
-      <Table users={userData}>
-
-      </Table>
+      <Table users={userData}/>
     </div>
   )
 }

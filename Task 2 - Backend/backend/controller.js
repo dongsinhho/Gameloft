@@ -68,7 +68,7 @@ const controller = {
     update: async (req, res) => {
         try {
             if (!Array.isArray(req.body)) {
-                const { error } = await validationCreate.validate(req.body)
+                const { error } = await validationUpdate.validate(req.body)
                 if (error) {
                     return res.status(400).json({ message: error.details[0].message })
                 }
@@ -78,6 +78,9 @@ const controller = {
                 }
                 Object.assign(user, req.body)
                 user.save()
+                return res.status(200).json({
+                    message: "All users have been updated"
+                })  
             } else {
                 let errorObject = []
                 for (i in req.body) {
@@ -101,17 +104,16 @@ const controller = {
                     }
                 }  
                 if (errorObject.length != 0) {
-                    res.status(202).json(errorObject)   
+                    return res.status(202).json(errorObject)   
                 }
-                res.status(200).json({
+                return res.status(200).json({
                     message: "All users have been updated"
                 })   
             }
         }
         catch (error) {
-            res.status(500).json({ message: `Something wrong. Detail... ${error}` })
+            return res.status(500).json({ message: `Something wrong. Detail... ${error}` })
         }
-        res.send(req.query.q)
     }
 }
 

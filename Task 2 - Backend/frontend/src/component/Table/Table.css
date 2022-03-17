@@ -6,10 +6,31 @@ table {
   
   td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 8px;
   }
   
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+button {
+  padding: 0;
+  margin: 0;
+  width: 5em;
+}
+
+.nonEditable {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  pointer-events: none;
+}
+
+input::placeholder {
+  color: black;
+}
+
+.inputDateNone::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
