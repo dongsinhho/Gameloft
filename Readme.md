@@ -43,4 +43,4 @@ npm install
 npm start
 ```
 
-5. Repeat with backend 
+5. Repeat with frontend 
