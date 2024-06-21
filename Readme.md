@@ -16,8 +16,8 @@ Create file .env in folder Task 2 - Backend / backend and type:
 
 ```
 PORT = 4000
-MONGO_URL = mongodb+srv://sinhdeptrai:U4eGrPzORmZVDlZw@cluster0.m06ah.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-JWT_SECRET_KEY=hongocdongsinh
+MONGO_URL = 
+JWT_SECRET_KEY=
 EXPIRES_IN=1d
 ```
 
